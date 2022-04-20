@@ -11,5 +11,5 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['supporter'] = [
         'diamond_sponsor' => 'Diamond Sponsor',
     ],
     'eval' => ['required' => true],
-    'sql' => ['type' => 'blob', 'length' => 65535, 'notnull' => false],
+    'sql' => ['type' => 'varchar', 'length' => 16, 'default' => '', 'customSchemaOptions' => ['collation' => 'ascii_bin']],
 ];
