@@ -1,0 +1,27 @@
+{
+    "name": "contao-association/contao-supporter-feed",
+    "type": "contao-bundle",
+    "description": "Extension to list the supporters of Contao CMS",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "contao/core-bundle":"^4.13"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ContaoAssociation\\SupporterFeedBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "ContaoAssociation\\SupporterFeedBundle\\ContaoManager\\Plugin"
+    },
+    "scripts": {
+        "cs-fixer": "tools/ecs/vendor/bin/ecs check src/ --fix --ansi"
+    }
+}

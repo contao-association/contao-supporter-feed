@@ -1,0 +1,16 @@
+
+<div class="{{ class }} block" {{ cssID }}{% if style is defined %} style="{{ style }}"{% endif %}>
+    <ul>
+        {% for item in supporters %}
+        <li class="{{ item.level }}">
+            {% if item.link is defined %}<a href="{{ item.link|e('html_attr') }}" target="_blank" rel="noreferrer noopener" title="{{ item.name|e('html_attr') }}">{% endif %}
+                {% if item.logo is defined %}
+                    <figure><img src="{{ item.logo|e('html_attr') }}" alt="{{ item.name|e('html_attr') }}"></figure>
+                {% else %}
+                    {{ item.name }}
+                {% endif %}
+            {% if item.link is defined %}</a>{% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
