@@ -6,22 +6,17 @@ namespace ContaoAssociation\SupporterFeedBundle\Controller;
 
 use Contao\ContentModel;
 use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
-use Contao\CoreBundle\ServiceAnnotation\ContentElement;
+use Contao\CoreBundle\DependencyInjection\Attribute\AsContentElement;
 use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-/**
- * @ContentElement(category="includes", renderer="esi")
- */
+#[AsContentElement(category: 'includes', renderer: 'esi')]
 class SupporterFeedController extends AbstractContentElementController
 {
-    private HttpClientInterface $httpClient;
-
-    public function __construct(HttpClientInterface $httpClient)
+    public function __construct(private readonly HttpClientInterface $httpClient)
     {
-        $this->httpClient = $httpClient;
     }
 
     protected function getResponse(Template $template, ContentModel $model, Request $request): Response
