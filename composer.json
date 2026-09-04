@@ -4,13 +4,13 @@
     "description": "Extension to list the supporters of Contao CMS",
     "license": "MIT",
     "require": {
-        "php": "^8.1",
-        "contao/core-bundle":"^5.3",
-        "symfony/config": "^6 || ^7",
-        "symfony/dependency-injection": "^6 || ^7",
+        "php": "^8.4",
+        "contao/core-bundle":"^5.7 || ^6.0",
+        "symfony/config": "^7.4 || ^8",
+        "symfony/dependency-injection": "^7.4 || ^8",
         "symfony/http-client-contracts": "^3",
-        "symfony/http-foundation": "^6 || ^7",
-        "symfony/http-kernel": "^6 || ^7"
+        "symfony/http-foundation": "^7.4 || ^8",
+        "symfony/http-kernel": "^7.4 || ^8"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0",
